@@ -121,3 +121,6 @@ USE_TZ = True
 STATIC_ROOT = '/Users/amanda/Documents/PythonProjects/micropythonapi/booksapi/static'
 STATIC_URL = '/static/'
 
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
