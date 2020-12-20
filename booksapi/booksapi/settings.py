@@ -122,5 +122,5 @@ STATIC_ROOT = '/Users/amanda/Documents/PythonProjects/micropythonapi/booksapi/st
 STATIC_URL = '/static/'
 
 # Configure Django App for Heroku.
-import django-on-heroku
-django-on-heroku.settings(locals())
+import django_on_heroku
+django_on_heroku.settings(locals())
