@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = 'Loads bestseller books'
 
     def handle(self, *args, **kwargs):
-        with open('/Users/amanda/Documents/PythonProjects/micropythonapi/bestsellers-with-categories.csv') as f:
+        with open('/../../../bestsellers-with-categories.csv') as f:
             reader = csv.reader(f)
             next(reader)
             for row in reader:
