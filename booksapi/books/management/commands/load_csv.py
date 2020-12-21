@@ -1,12 +1,14 @@
 from django.core.management.base import BaseCommand, CommandError
 from ...models import Book
 import csv
+import os
 
 class Command(BaseCommand):
     help = 'Loads bestseller books'
 
     def handle(self, *args, **kwargs):
-        with open('/../../../../bestsellers-with-categories.csv') as f:
+        topdir = os.path.dirname('micropythonapi')
+        with open(str(topdir) + 'bestsellers-with-categories.csv') as f:
             reader = csv.reader(f)
             next(reader)
             for row in reader:
